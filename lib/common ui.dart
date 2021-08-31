@@ -3,6 +3,8 @@ import 'package:flutter/services.dart';
 import 'package:petecommerce/colors.dart';
 import 'home.dart';
 import 'stray.dart';
+import 'package:external_app_launcher/external_app_launcher.dart';
+
 
 class sidedrawer extends StatelessWidget {
   @override
@@ -60,6 +62,19 @@ class sidedrawer extends StatelessWidget {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) =>vets()));
                   },
+                ),
+                Container(
+                  decoration: BoxDecoration(color: Colors.blue.shade50),
+                  child: ListTile(
+                    
+                    title: Text('Play with your pet in AR*'),
+                    onTap: () async{
+                      await LaunchApp.openApp(
+                        androidPackageName: 'com.grappsgames.ortk_play.treedanimalsar',
+                        // openStore: false,
+                      );
+                    },
+                  ),
                 ),
                 ListTile(
 

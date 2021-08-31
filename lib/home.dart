@@ -5,6 +5,12 @@ import 'colors.dart';
 import 'petdata.dart';
 import 'categories.dart';
 import 'widget.dart';
+//for future use
+// import 'package:url_launcher/url_launcher.dart';
+// import 'package:device_apps/device_apps.dart';
+// import 'package:android_intent/android_intent.dart';
+
+
 class userhome extends StatefulWidget {
 
   @override

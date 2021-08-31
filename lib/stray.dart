@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'colors.dart';
 import 'common ui.dart';
 import 'home.dart';
-
 class stray extends StatelessWidget {
   const stray({Key? key}) : super(key: key);
 
@@ -18,133 +17,189 @@ class stray extends StatelessWidget {
       ),
       drawer: sidedrawer(),
       body:
-      Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Padding(
-              padding: EdgeInsets.only(left: 16, right: 8,bottom: 8,top: 24),
-              child: Text(
-                "Adopt, Don’t Shop!",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 24,
+      Center(
+        child: ListView(
+          physics: BouncingScrollPhysics(),
+          shrinkWrap: true,
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            // crossAxisAlignment: CrossAxisAlignment.center,
+
+            children: [
+              Padding(
+                padding: EdgeInsets.only(left: 16, right: 8,bottom: 8,top: 14),
+                child: Text(
+                  "Adopt, Don’t Shop!",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 24,
+                  ),
                 ),
               ),
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-              child: Text(
-                "Help your little companion by adopting!",
-                style: TextStyle(
-                  color: Colors.grey[800],
-                  fontSize: 20,
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                child: Text(
+                  "Help a little life by adopting instead of purchasing.",
+                  style: TextStyle(
+                    color: Colors.grey[800],
+                    fontSize: 20,
+                  ),
+                  textAlign: TextAlign.center,
                 ),
-                textAlign: TextAlign.center,
               ),
-            ),
-            Card(
-                color: AppColor.palespring,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Divider(height: 5,),
-                    ListTile(
-                      leading: Icon(Icons.apartment_outlined),
-                      title: Text('Rakshaa',style: TextStyle(fontWeight: FontWeight.bold)),
-                      subtitle: Text('Animal Enthusiast\nLast Updated: 9:36 AM, 27 Sept'),
+              Card(
 
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
+                  color: AppColor.palespring,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Divider(height: 5,),
+                      ListTile(
+                        leading: Icon(Icons.face_sharp),
+                        title: Text('Rakshaa',style: TextStyle(fontWeight: FontWeight.bold)),
+                        subtitle: Text('Animal Enthusiast\nLast Updated: 9:36 AM, 27 Sept'),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
 
-                        Text('Contact'),
-                        IconButton(icon: Icon(Icons.phone), onPressed: (){})
-                      ],
-                    ),
-                    Divider(height: 5,),
-                  ],
-                )
+                          Text('Contact'),
+                          IconButton(icon: Icon(Icons.phone), onPressed: (){})
+                        ],
+                      ),
+                      Divider(height: 5,),
+                    ],
+                  )
 
-            ),
-            Card(
-                color: AppColor.cornsilk,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Divider(height: 5,),
-                    ListTile(
-                      leading: Icon(Icons.apartment_outlined),
-                      title: Text('Manans Animal Shelter',style: TextStyle(fontWeight: FontWeight.bold)),
-                      subtitle: Text('Institutional Shelter\nLast Updated: 10:20 AM, 29 Sept'),
+              ),
+              Card(
+                  color: AppColor.cornsilk,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Divider(height: 5,),
+                      ListTile(
+                        leading: Icon(Icons.apartment_outlined),
+                        title: Text('Manans Animal Shelter',style: TextStyle(fontWeight: FontWeight.bold)),
+                        subtitle: Text('Institutional Shelter\nLast Updated: 10:20 AM, 29 Sept'),
 
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
 
-                        Text('Contact'),
-                        IconButton(icon: Icon(Icons.phone), onPressed: (){})
-                      ],
-                    ),
-                    Divider(height: 5,),
-                  ],
-                )
+                          Text('Contact'),
+                          IconButton(icon: Icon(Icons.phone), onPressed: (){})
+                        ],
+                      ),
+                      Divider(height: 5,),
+                    ],
+                  )
 
-            ),
-            Card(
-                color: AppColor.palespring,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Divider(height: 5,),
-                    ListTile(
-                      leading: Icon(Icons.apartment_outlined),
-                      title: Text('Ashins Shelter',style: TextStyle(fontWeight: FontWeight.bold)),
-                      subtitle: Text('Institutional Shelter\nLast Updated: 4:06 PM, 30 Sept'),
+              ),
+              Card(
+                  color: AppColor.palespring,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Divider(height: 5,),
+                      ListTile(
+                        leading: Icon(Icons.apartment_outlined),
+                        title: Text('Ashins Shelter',style: TextStyle(fontWeight: FontWeight.bold)),
+                        subtitle: Text('Institutional Shelter\nLast Updated: 4:06 PM, 30 Sept'),
 
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
 
-                        Text('Contact'),
-                        IconButton(icon: Icon(Icons.phone), onPressed: (){})
-                      ],
-                    ),
-                    Divider(height: 5,),
-                  ],
-                )
+                          Text('Contact'),
+                          IconButton(icon: Icon(Icons.phone), onPressed: (){})
+                        ],
+                      ),
+                      Divider(height: 5,),
+                    ],
+                  )
 
-            ),
-            Card(
-                color: AppColor.cornsilk,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Divider(height: 5,),
-                    ListTile(
-                      leading: Icon(Icons.apartment_outlined),
-                      title: Text('Shashwat',style: TextStyle(fontWeight: FontWeight.bold)),
-                      subtitle: Text('Animal Enthusiast\nLast Updated: 10:52 AM, 30 Sept'),
+              ),
+              Card(
+                  color: AppColor.cornsilk,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Divider(height: 5,),
+                      ListTile(
+                        leading: Icon(Icons.face_sharp),
+                        title: Text('Shashwat',style: TextStyle(fontWeight: FontWeight.bold)),
+                        subtitle: Text('Animal Enthusiast\nLast Updated: 10:52 AM, 30 Sept'),
 
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
 
-                        Text('Contact'),
-                        IconButton(icon: Icon(Icons.phone), onPressed: (){})
-                      ],
-                    ),
-                    Divider(height: 5,),
-                  ],
-                )
+                          Text('Contact'),
+                          IconButton(icon: Icon(Icons.phone), onPressed: (){})
+                        ],
+                      ),
+                      Divider(height: 5,),
+                    ],
+                  )
 
-            ),
+              ),
+              Card(
+                  color: AppColor.palespring,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Divider(height: 5,),
+                      ListTile(
+                        leading: Icon(Icons.house_siding),
+                        title: Text('Inferno Animal Shelter',style: TextStyle(fontWeight: FontWeight.bold)),
+                        subtitle: Text('Local Animal Shelter\nLast Updated: 10:52 AM, 30 Sept'),
 
-          ]
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+
+                          Text('Contact'),
+                          IconButton(icon: Icon(Icons.phone), onPressed: (){})
+                        ],
+                      ),
+                      Divider(height: 5,),
+                    ],
+                  )
+
+              ),
+              Card(
+                  color: AppColor.cornsilk,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Divider(height: 5,),
+                      ListTile(
+                        leading: Icon(Icons.house_siding),
+                        title: Text('Kirans Adoption Shelter',style: TextStyle(fontWeight: FontWeight.bold)),
+                        subtitle: Text('Local Animal Shelter\nLast Updated: 8:43 PM, 30 Sept'),
+
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+
+                          Text('Contact'),
+                          IconButton(icon: Icon(Icons.phone), onPressed: (){})
+                        ],
+                      ),
+                      Divider(height: 5,),
+                    ],
+                  )
+
+              ),
+
+            ]
+        ),
       ),
     );
   }
@@ -155,14 +210,14 @@ class  vets extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    appBar: AppBar(
-    centerTitle: true,
-title: Text("Find a Vet",
-style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),),
-backgroundColor: AppColor.lightfawn,
-elevation: 4,
-),
-drawer: sidedrawer(),backgroundColor: AppColor.palespring,
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text("Find a Vet",
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),),
+        backgroundColor: AppColor.lightfawn,
+        elevation: 4,
+      ),
+      drawer: sidedrawer(),backgroundColor: AppColor.palespring,
       body:
       Column(
         children: [
@@ -173,7 +228,7 @@ drawer: sidedrawer(),backgroundColor: AppColor.palespring,
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
-                fontSize: 24,
+                fontSize: 23,
               ),
             ),
           ),
@@ -190,18 +245,17 @@ drawer: sidedrawer(),backgroundColor: AppColor.palespring,
 
           Divider(height: 20,thickness: 3,),
           Container(
-            height: 540,
+            height: 400,
             margin: EdgeInsets.only(bottom: 16),
             child: ListView(
               physics: BouncingScrollPhysics(),
               children: [
-                buildVet("assets/images/vets/vet_2.png", "Big Lake Vet Hospital", "+91 89723887123"),
+                buildVet("assets/images/vets/vet_2.png", "General Purpose Vet Clinic", "+91 89723887123"),
                 buildVet("assets/images/vets/vet_0.png", "Animal Emergency Hospital", "+91 72837182973"),
                 buildVet("assets/images/vets/vet_1.png", "Artemis Veterinary Center", "+91 81928371289"),
                 buildVet("assets/images/vets/vet_3.png", "Veterinary Medical Center", "+91 98123971237"),
                 buildVet("assets/images/vets/vet_2.png", "Dr Nagarjuna's Vet Clinic", "+91 8812231237"),
                 buildVet("assets/images/vets/vet_0.png", "Dr Shankar Vet Clinic", "+91 9249272711"),
-
               ],
             ),
           ),
@@ -219,7 +273,7 @@ Widget buildVet(String imageUrl, String name, String phone){
         Radius.circular(25),
       ),
       border: Border.all(
-        width: 1,
+        width:2,
         color: Colors.grey.shade300,
       ),
     ),
@@ -313,3 +367,8 @@ Widget buildVet(String imageUrl, String name, String phone){
     ),
   );
 }
+
+
+
+
+

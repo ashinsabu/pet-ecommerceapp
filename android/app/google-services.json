@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "841048389172",
+    "project_id": "petstop-b3bf9",
+    "storage_bucket": "petstop-b3bf9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841048389172:android:0a9c2b52e14ffb937a3c61",
+        "android_client_info": {
+          "package_name": "com.android.petecommerce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841048389172-kvrmun2s3fuqpv8f0j484c8vs1amkoql.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBK-lWaVnoxQYV4OlJp3fbcq4s5_0SNYSo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841048389172-kvrmun2s3fuqpv8f0j484c8vs1amkoql.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

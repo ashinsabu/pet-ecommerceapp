@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">841048389172-kvrmun2s3fuqpv8f0j484c8vs1amkoql.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">841048389172</string>
+    <string name="google_api_key" translatable="false">AIzaSyBK-lWaVnoxQYV4OlJp3fbcq4s5_0SNYSo</string>
+    <string name="google_app_id" translatable="false">1:841048389172:android:0a9c2b52e14ffb937a3c61</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBK-lWaVnoxQYV4OlJp3fbcq4s5_0SNYSo</string>
+    <string name="google_storage_bucket" translatable="false">petstop-b3bf9.appspot.com</string>
+    <string name="project_id" translatable="false">petstop-b3bf9</string>
+</resources>

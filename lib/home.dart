@@ -45,17 +45,18 @@ class _userhomeState extends State<userhome> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: EdgeInsets.only(left: 16, right: 8,bottom: 8,top: 24),
-                child: Text(
-                  "Purchase Your",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 24,
+                  Padding(
+                    padding: EdgeInsets.only(left: 16, right: 8,bottom: 8,top: 24),
+                    child: Text(
+                      "Purchase Your",
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 24,
+                      ),
+                    ),
                   ),
-                ),
-              ),
+
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 child: Text(
@@ -64,6 +65,7 @@ class _userhomeState extends State<userhome> {
                     color: Colors.grey[800],
                     fontSize: 24,
                   ),
+
                 ),
               ),
               Padding(

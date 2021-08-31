@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:petecommerce/colors.dart';
+import 'package:petecommerce/services/auth.dart';
+import 'package:petecommerce/supplies.dart';
 import 'home.dart';
 import 'stray.dart';
 import 'package:external_app_launcher/external_app_launcher.dart';
+import 'services/auth.dart';
 
 
 class sidedrawer extends StatelessWidget {
+  final AuthService _auth = AuthService();
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,6 +32,7 @@ class sidedrawer extends StatelessWidget {
                   ),
                 ),
                 ListTile(
+                  leading: Icon(Icons.home),
                   title: Text('Home'),
                   onTap: (){
                     Navigator.pop(context);
@@ -37,6 +42,7 @@ class sidedrawer extends StatelessWidget {
                   },
                 ),
                 ListTile(
+                  leading: Icon(Icons.house_siding),
                   title: Text('Adopt a stray'),
                   onTap: (){
                     Navigator.pop(context);
@@ -46,6 +52,7 @@ class sidedrawer extends StatelessWidget {
                   },
                 ),
                 ListTile(
+                  leading: Icon(Icons.local_hospital),
                   title: Text('Vets for my pet'),
                   onTap: (){
                     Navigator.pop(context);
@@ -55,18 +62,19 @@ class sidedrawer extends StatelessWidget {
                   },
                 ),
                 ListTile(
-                  title: Text('Pet supplies (WIP)'),
+                  leading: Icon(Icons.store),
+                  title: Text('Pet supplies '),
                   onTap: (){
                     Navigator.pop(context);
 
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) =>vets()));
+                        MaterialPageRoute(builder: (context) =>supplies()));
                   },
                 ),
                 Container(
                   decoration: BoxDecoration(color: Colors.blue.shade50),
                   child: ListTile(
-                    
+                    leading: Icon(Icons.view_in_ar),
                     title: Text('Play with your pet in AR*'),
                     onTap: () async{
                       await LaunchApp.openApp(
@@ -76,12 +84,18 @@ class sidedrawer extends StatelessWidget {
                     },
                   ),
                 ),
-                ListTile(
 
-                  title: Text('Exit'),
-                  onTap: (){
-                    SystemNavigator.pop();
-                  },
+                SizedBox(height: 155,),
+
+                Container(
+                  decoration: BoxDecoration(color: Colors.brown),
+                  child: ListTile(
+
+                    title: Text('Exit'),
+                    onTap: (){
+                      SystemNavigator.pop();
+                    },
+                  ),
                 )
               ])),
     );

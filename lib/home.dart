@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:petecommerce/common%20ui.dart';
+import 'package:petecommerce/services/auth.dart';
 import 'colors.dart';
 import 'petdata.dart';
 import 'categories.dart';
@@ -18,7 +19,7 @@ class userhome extends StatefulWidget {
 }
 
 class _userhomeState extends State<userhome> {
-
+  final AuthService _auth=AuthService();
   List<Pet> pets = getPetList(); //temp before adding backend
   @override
   Widget build(BuildContext context) {
@@ -30,11 +31,13 @@ class _userhomeState extends State<userhome> {
           backgroundColor: AppColor.lightfawn,
           actions: [
             Padding(
-              padding: EdgeInsets.only(right: 16),
-              child: Icon(
-                Icons.message,
-                color: Colors.white70,
-              ),
+              padding: EdgeInsets.only(right: 3),
+              child: IconButton(
+                icon: Icon(Icons.logout),
+                onPressed: () async {
+                  await _auth.signOut();
+                },
+              )
             ),
           ],
           elevation: 4,

@@ -13,8 +13,6 @@ class authwrap extends StatelessWidget {
     if(user == null)
     //return home or login
     return Authenticate();
-    else{
-      return userhome();
-    }
+    else {return userhome();}
   }
 }
